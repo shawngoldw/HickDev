@@ -67,7 +67,6 @@
 		FD28D1421572974B00B45E03 /* BoincController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoincController.h; sourceTree = "<group>"; };
 		FD28D1431572974B00B45E03 /* BoincController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BoincController.mm; sourceTree = "<group>"; };
 		FD34245E1572A087007453F1 /* gui_rpc_auth.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gui_rpc_auth.cfg; path = ../Build/Products/Debug/gui_rpc_auth.cfg; sourceTree = "<group>"; };
-		FDCEDA7A15729E47008349DB /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +97,6 @@
 		FD28D0DE15728D4A00B45E03 = {
 			isa = PBXGroup;
 			children = (
-				FDCEDA7A15729E47008349DB /* include */,
 				FD28D13615728F1D00B45E03 /* boinc */,
 				FD34245E1572A087007453F1 /* gui_rpc_auth.cfg */,
 				FD28D13715728F1D00B45E03 /* libboinc_api.a */,
