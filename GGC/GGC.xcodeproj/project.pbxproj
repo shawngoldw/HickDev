@@ -19,6 +19,12 @@
 		FD28D11815728D4A00B45E03 /* GGCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FD28D11715728D4A00B45E03 /* GGCTests.m */; };
 		FD28D12215728D5E00B45E03 /* gitignore.gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FD28D12115728D5E00B45E03 /* gitignore.gitignore */; };
 		FD28D12315728D5E00B45E03 /* gitignore.gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FD28D12115728D5E00B45E03 /* gitignore.gitignore */; };
+		FD28D13915728F1D00B45E03 /* boinc in Resources */ = {isa = PBXBuildFile; fileRef = FD28D13615728F1D00B45E03 /* boinc */; };
+		FD28D13A15728F1D00B45E03 /* boinc in Resources */ = {isa = PBXBuildFile; fileRef = FD28D13615728F1D00B45E03 /* boinc */; };
+		FD28D13B15728F1D00B45E03 /* libboinc_api.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13715728F1D00B45E03 /* libboinc_api.a */; };
+		FD28D13C15728F1D00B45E03 /* libboinc_api.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13715728F1D00B45E03 /* libboinc_api.a */; };
+		FD28D13D15728F1D00B45E03 /* libboinc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13815728F1D00B45E03 /* libboinc.a */; };
+		FD28D13E15728F1D00B45E03 /* libboinc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13815728F1D00B45E03 /* libboinc.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +58,9 @@
 		FD28D11615728D4A00B45E03 /* GGCTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GGCTests.h; sourceTree = "<group>"; };
 		FD28D11715728D4A00B45E03 /* GGCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGCTests.m; sourceTree = "<group>"; };
 		FD28D12115728D5E00B45E03 /* gitignore.gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitignore.gitignore; sourceTree = "<group>"; };
+		FD28D13615728F1D00B45E03 /* boinc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = boinc; sourceTree = "<group>"; };
+		FD28D13715728F1D00B45E03 /* libboinc_api.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboinc_api.a; sourceTree = "<group>"; };
+		FD28D13815728F1D00B45E03 /* libboinc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboinc.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +69,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD28D0EE15728D4A00B45E03 /* Cocoa.framework in Frameworks */,
+				FD28D13B15728F1D00B45E03 /* libboinc_api.a in Frameworks */,
+				FD28D13D15728F1D00B45E03 /* libboinc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +80,8 @@
 			files = (
 				FD28D10C15728D4A00B45E03 /* SenTestingKit.framework in Frameworks */,
 				FD28D10D15728D4A00B45E03 /* Cocoa.framework in Frameworks */,
+				FD28D13C15728F1D00B45E03 /* libboinc_api.a in Frameworks */,
+				FD28D13E15728F1D00B45E03 /* libboinc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +91,9 @@
 		FD28D0DE15728D4A00B45E03 = {
 			isa = PBXGroup;
 			children = (
+				FD28D13615728F1D00B45E03 /* boinc */,
+				FD28D13715728F1D00B45E03 /* libboinc_api.a */,
+				FD28D13815728F1D00B45E03 /* libboinc.a */,
 				FD28D12115728D5E00B45E03 /* gitignore.gitignore */,
 				FD28D0F315728D4A00B45E03 /* GGC */,
 				FD28D11015728D4A00B45E03 /* GGCTests */,
@@ -231,6 +247,7 @@
 				FD28D0FE15728D4A00B45E03 /* Credits.rtf in Resources */,
 				FD28D10415728D4A00B45E03 /* MainMenu.xib in Resources */,
 				FD28D12215728D5E00B45E03 /* gitignore.gitignore in Resources */,
+				FD28D13915728F1D00B45E03 /* boinc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,6 +257,7 @@
 			files = (
 				FD28D11515728D4A00B45E03 /* InfoPlist.strings in Resources */,
 				FD28D12315728D5E00B45E03 /* gitignore.gitignore in Resources */,
+				FD28D13A15728F1D00B45E03 /* boinc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +396,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGC/GGC-Prefix.pch";
 				INFOPLIST_FILE = "GGC/GGC-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -389,6 +411,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGC/GGC-Prefix.pch";
 				INFOPLIST_FILE = "GGC/GGC-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -402,6 +428,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGC/GGC-Prefix.pch";
 				INFOPLIST_FILE = "GGCTests/GGCTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
@@ -416,6 +446,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGC/GGC-Prefix.pch";
 				INFOPLIST_FILE = "GGCTests/GGCTests-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
