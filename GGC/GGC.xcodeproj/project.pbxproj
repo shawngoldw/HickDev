@@ -11,7 +11,7 @@
 		FD28D0F815728D4A00B45E03 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FD28D0F615728D4A00B45E03 /* InfoPlist.strings */; };
 		FD28D0FA15728D4A00B45E03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FD28D0F915728D4A00B45E03 /* main.m */; };
 		FD28D0FE15728D4A00B45E03 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FD28D0FC15728D4A00B45E03 /* Credits.rtf */; };
-		FD28D10115728D4A00B45E03 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FD28D10015728D4A00B45E03 /* AppDelegate.m */; };
+		FD28D10115728D4A00B45E03 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD28D10015728D4A00B45E03 /* AppDelegate.mm */; };
 		FD28D10415728D4A00B45E03 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FD28D10215728D4A00B45E03 /* MainMenu.xib */; };
 		FD28D10C15728D4A00B45E03 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D10B15728D4A00B45E03 /* SenTestingKit.framework */; };
 		FD28D10D15728D4A00B45E03 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D0ED15728D4A00B45E03 /* Cocoa.framework */; };
@@ -25,6 +25,9 @@
 		FD28D13C15728F1D00B45E03 /* libboinc_api.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13715728F1D00B45E03 /* libboinc_api.a */; };
 		FD28D13D15728F1D00B45E03 /* libboinc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13815728F1D00B45E03 /* libboinc.a */; };
 		FD28D13E15728F1D00B45E03 /* libboinc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13815728F1D00B45E03 /* libboinc.a */; };
+		FD28D1441572974B00B45E03 /* BoincController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD28D1431572974B00B45E03 /* BoincController.mm */; };
+		FD28D1451572974B00B45E03 /* BoincController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD28D1431572974B00B45E03 /* BoincController.mm */; };
+		FD34245F1572A087007453F1 /* gui_rpc_auth.cfg in Resources */ = {isa = PBXBuildFile; fileRef = FD34245E1572A087007453F1 /* gui_rpc_auth.cfg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +52,7 @@
 		FD28D0FB15728D4A00B45E03 /* GGC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GGC-Prefix.pch"; sourceTree = "<group>"; };
 		FD28D0FD15728D4A00B45E03 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		FD28D0FF15728D4A00B45E03 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FD28D10015728D4A00B45E03 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FD28D10015728D4A00B45E03 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
 		FD28D10315728D4A00B45E03 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		FD28D10A15728D4A00B45E03 /* GGCTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GGCTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD28D10B15728D4A00B45E03 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -61,6 +64,10 @@
 		FD28D13615728F1D00B45E03 /* boinc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = boinc; sourceTree = "<group>"; };
 		FD28D13715728F1D00B45E03 /* libboinc_api.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboinc_api.a; sourceTree = "<group>"; };
 		FD28D13815728F1D00B45E03 /* libboinc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboinc.a; sourceTree = "<group>"; };
+		FD28D1421572974B00B45E03 /* BoincController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoincController.h; sourceTree = "<group>"; };
+		FD28D1431572974B00B45E03 /* BoincController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BoincController.mm; sourceTree = "<group>"; };
+		FD34245E1572A087007453F1 /* gui_rpc_auth.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gui_rpc_auth.cfg; path = ../Build/Products/Debug/gui_rpc_auth.cfg; sourceTree = "<group>"; };
+		FDCEDA7A15729E47008349DB /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +98,9 @@
 		FD28D0DE15728D4A00B45E03 = {
 			isa = PBXGroup;
 			children = (
+				FDCEDA7A15729E47008349DB /* include */,
 				FD28D13615728F1D00B45E03 /* boinc */,
+				FD34245E1572A087007453F1 /* gui_rpc_auth.cfg */,
 				FD28D13715728F1D00B45E03 /* libboinc_api.a */,
 				FD28D13815728F1D00B45E03 /* libboinc.a */,
 				FD28D12115728D5E00B45E03 /* gitignore.gitignore */,
@@ -135,9 +144,11 @@
 			isa = PBXGroup;
 			children = (
 				FD28D0FF15728D4A00B45E03 /* AppDelegate.h */,
-				FD28D10015728D4A00B45E03 /* AppDelegate.m */,
+				FD28D10015728D4A00B45E03 /* AppDelegate.mm */,
 				FD28D10215728D4A00B45E03 /* MainMenu.xib */,
 				FD28D0F415728D4A00B45E03 /* Supporting Files */,
+				FD28D1421572974B00B45E03 /* BoincController.h */,
+				FD28D1431572974B00B45E03 /* BoincController.mm */,
 			);
 			path = GGC;
 			sourceTree = "<group>";
@@ -248,6 +259,7 @@
 				FD28D10415728D4A00B45E03 /* MainMenu.xib in Resources */,
 				FD28D12215728D5E00B45E03 /* gitignore.gitignore in Resources */,
 				FD28D13915728F1D00B45E03 /* boinc in Resources */,
+				FD34245F1572A087007453F1 /* gui_rpc_auth.cfg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD28D0FA15728D4A00B45E03 /* main.m in Sources */,
-				FD28D10115728D4A00B45E03 /* AppDelegate.m in Sources */,
+				FD28D10115728D4A00B45E03 /* AppDelegate.mm in Sources */,
+				FD28D1441572974B00B45E03 /* BoincController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD28D11815728D4A00B45E03 /* GGCTests.m in Sources */,
+				FD28D1451572974B00B45E03 /* BoincController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,12 +409,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGC/GGC-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "GGC/GGC-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/**\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -410,12 +426,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GGC/GGC-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "GGC/GGC-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/**\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -475,6 +493,7 @@
 				FD28D11D15728D4A00B45E03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FD28D11E15728D4A00B45E03 /* Build configuration list for PBXNativeTarget "GGCTests" */ = {
 			isa = XCConfigurationList;
@@ -483,6 +502,7 @@
 				FD28D12015728D4A00B45E03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
