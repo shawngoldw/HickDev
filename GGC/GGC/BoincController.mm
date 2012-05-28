@@ -126,7 +126,7 @@
 -(int)initRPC
 {
     int rc;
-    char *rpc_pw[32];
+    char rpc_pw[32];
     
     rpc = RPC_CLIENT();
     // Connect to the Boinc Core Client
@@ -136,14 +136,13 @@
     }
     
     // Get the Boinc Core Client authorization key
-    *rpc_pw = "e12fbe8f31f916fe6bfa15836f9f1c61";
-    //rc = read_gui_rpc_password(*rpc_pw);
+    rc = read_gui_rpc_password(rpc_pw);
     if (rc) {
         return rc;
     }
-    // Request authorization to control the Boinc Core Client
-    rc = rpc.authorize(*rpc_pw);
     
+    // Request authorization to control the Boinc Core Client
+    rc = rpc.authorize(rpc_pw);
     return rc;
 }
 
@@ -317,6 +316,22 @@
     
     // Clean up Boinc
     boinc_finish(nil);
+}
+
+extern int read_gui_rpc_password2(char* buf) {
+    FILE* f = fopen(GUI_RPC_PASSWD_FILE, "r");
+    if (!f) return ERR_FOPEN;
+    char* p = fgets(buf, 256, f);
+    if (p) {
+        // trim CR
+        //
+        int n = (int)strlen(buf);
+        if (n && buf[n-1]=='\n') {
+            buf[n-1] = 0;
+        }
+    }
+    fclose(f);
+    return 0;
 }
 
 @end

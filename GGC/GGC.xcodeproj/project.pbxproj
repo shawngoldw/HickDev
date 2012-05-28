@@ -27,7 +27,6 @@
 		FD28D13E15728F1D00B45E03 /* libboinc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13815728F1D00B45E03 /* libboinc.a */; };
 		FD28D1441572974B00B45E03 /* BoincController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD28D1431572974B00B45E03 /* BoincController.mm */; };
 		FD28D1451572974B00B45E03 /* BoincController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD28D1431572974B00B45E03 /* BoincController.mm */; };
-		FD34245F1572A087007453F1 /* gui_rpc_auth.cfg in Resources */ = {isa = PBXBuildFile; fileRef = FD34245E1572A087007453F1 /* gui_rpc_auth.cfg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		FD28D13815728F1D00B45E03 /* libboinc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboinc.a; sourceTree = "<group>"; };
 		FD28D1421572974B00B45E03 /* BoincController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoincController.h; sourceTree = "<group>"; };
 		FD28D1431572974B00B45E03 /* BoincController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BoincController.mm; sourceTree = "<group>"; };
-		FD34245E1572A087007453F1 /* gui_rpc_auth.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = gui_rpc_auth.cfg; path = ../Build/Products/Debug/gui_rpc_auth.cfg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				FD28D13615728F1D00B45E03 /* boinc */,
-				FD34245E1572A087007453F1 /* gui_rpc_auth.cfg */,
 				FD28D13715728F1D00B45E03 /* libboinc_api.a */,
 				FD28D13815728F1D00B45E03 /* libboinc.a */,
 				FD28D12115728D5E00B45E03 /* gitignore.gitignore */,
@@ -257,7 +254,6 @@
 				FD28D10415728D4A00B45E03 /* MainMenu.xib in Resources */,
 				FD28D12215728D5E00B45E03 /* gitignore.gitignore in Resources */,
 				FD28D13915728F1D00B45E03 /* boinc in Resources */,
-				FD34245F1572A087007453F1 /* gui_rpc_auth.cfg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
