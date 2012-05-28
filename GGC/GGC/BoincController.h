@@ -16,12 +16,12 @@
 @property(retain) NSTask *task;
 
 @property(retain) NSArray *projectURLs;
+@property(retain) NSArray *projectNames;
 @property(assign) int selectedProjectIndex;
 
 -(BoincController *)init;
 
 -(int)launchClient;
--(int)initBoinc;
 -(int)initRPC;
 
 -(int)attachProjectsWithEmail:(NSString *)email username:(NSString *)username password:(NSString *)password;

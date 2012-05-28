@@ -8,8 +8,8 @@
 
 #import "BoincController.h"
 
-#import "boinc_api.h"
-#import "diagnostics.h"
+//#import "boinc_api.h"
+//#import "diagnostics.h"
 #import "gui_rpc_client.h"
 #import "util.h"
 
@@ -18,6 +18,7 @@
 @synthesize rpc;
 @synthesize task;
 @synthesize projectURLs;
+@synthesize projectNames;
 @synthesize selectedProjectIndex;
 
 /* Initialize the BoincController
@@ -32,19 +33,13 @@
     
     // Array of projects
     projectURLs = [[NSArray alloc] initWithObjects:@"boinc.bakerlab.org/rosetta", nil];
+    projectNames = [[NSArray alloc] initWithObjects:@"Rosetta@home", nil];
     selectedProjectIndex = 0;
     
     // Launch the Boinc Client
     err = [self launchClient];
     if (err) {
         fprintf(stderr, "launchClient failed. err=%d\n", err);
-        return self;
-    }
-    
-    // Initialize Boinc
-    err = [self initBoinc]; 
-    if (err) {
-        fprintf(stderr, "initClient failed. err=%d\n", err);
         return self;
     }
     
@@ -66,6 +61,8 @@
     return self;    
 }
 
+/* Start the Boinc Core Client
+ */
 -(int)launchClient
 {    
     NSArray *args;
@@ -108,18 +105,6 @@
     return 1;
 }
 
-/* Initialize Boinc
- */
--(int)initBoinc
-{
-    int rc;
-    boinc_init_diagnostics(BOINC_DIAG_MEMORYLEAKCHECKENABLED|
-                           BOINC_DIAG_DUMPCALLSTACKENABLED| 
-                           BOINC_DIAG_TRACETOSTDERR);
-    rc = boinc_init();
-    return rc;
-}
-
 /* Connect to the Boinc Core Client
  * Get authorization to control the Boinc Core Client
  */
@@ -155,15 +140,18 @@
     ACCOUNT_IN accti;
     ACCOUNT_OUT accto;
     NSString *project;
+    NSString *projectName;
     NSString *authenticator;
     NSString *error_msg;
     double maxTime;
     double sleepTime;
     int i;
+    int j;
     
     // Loop through all projects, which should be attached
-    for (project in projectURLs)
-    {
+    for (j = 0; j < [projectURLs count]; j++) {
+        project = [projectURLs objectAtIndex:j];
+        projectName = [projectNames objectAtIndex:j];
         // Attach the project if it isn't already attached
         if (![self isProjectAttached:project]) {
             accti = ACCOUNT_IN();
@@ -208,7 +196,7 @@
             }
             
             // Attach to the project (need to change project name)
-            rc = rpc.project_attach([project cStringUsingEncoding:NSUTF8StringEncoding], [authenticator cStringUsingEncoding:NSUTF8StringEncoding], "Rosetta@home");
+            rc = rpc.project_attach([project cStringUsingEncoding:NSUTF8StringEncoding], [authenticator cStringUsingEncoding:NSUTF8StringEncoding], [projectName cStringUsingEncoding:NSUTF8StringEncoding]);
             if (rc){
                 return rc;
             }
@@ -313,25 +301,6 @@
         // Interrupt the Boinc Core Client if it couldn't be exited gracefully
         [task interrupt];
     }
-    
-    // Clean up Boinc
-    boinc_finish(nil);
-}
-
-extern int read_gui_rpc_password2(char* buf) {
-    FILE* f = fopen(GUI_RPC_PASSWD_FILE, "r");
-    if (!f) return ERR_FOPEN;
-    char* p = fgets(buf, 256, f);
-    if (p) {
-        // trim CR
-        //
-        int n = (int)strlen(buf);
-        if (n && buf[n-1]=='\n') {
-            buf[n-1] = 0;
-        }
-    }
-    fclose(f);
-    return 0;
 }
 
 @end

@@ -21,8 +21,6 @@
 		FD28D12315728D5E00B45E03 /* gitignore.gitignore in Resources */ = {isa = PBXBuildFile; fileRef = FD28D12115728D5E00B45E03 /* gitignore.gitignore */; };
 		FD28D13915728F1D00B45E03 /* boinc in Resources */ = {isa = PBXBuildFile; fileRef = FD28D13615728F1D00B45E03 /* boinc */; };
 		FD28D13A15728F1D00B45E03 /* boinc in Resources */ = {isa = PBXBuildFile; fileRef = FD28D13615728F1D00B45E03 /* boinc */; };
-		FD28D13B15728F1D00B45E03 /* libboinc_api.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13715728F1D00B45E03 /* libboinc_api.a */; };
-		FD28D13C15728F1D00B45E03 /* libboinc_api.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13715728F1D00B45E03 /* libboinc_api.a */; };
 		FD28D13D15728F1D00B45E03 /* libboinc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13815728F1D00B45E03 /* libboinc.a */; };
 		FD28D13E15728F1D00B45E03 /* libboinc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FD28D13815728F1D00B45E03 /* libboinc.a */; };
 		FD28D1441572974B00B45E03 /* BoincController.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD28D1431572974B00B45E03 /* BoincController.mm */; };
@@ -61,7 +59,6 @@
 		FD28D11715728D4A00B45E03 /* GGCTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GGCTests.m; sourceTree = "<group>"; };
 		FD28D12115728D5E00B45E03 /* gitignore.gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gitignore.gitignore; sourceTree = "<group>"; };
 		FD28D13615728F1D00B45E03 /* boinc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = boinc; sourceTree = "<group>"; };
-		FD28D13715728F1D00B45E03 /* libboinc_api.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboinc_api.a; sourceTree = "<group>"; };
 		FD28D13815728F1D00B45E03 /* libboinc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libboinc.a; sourceTree = "<group>"; };
 		FD28D1421572974B00B45E03 /* BoincController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoincController.h; sourceTree = "<group>"; };
 		FD28D1431572974B00B45E03 /* BoincController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BoincController.mm; sourceTree = "<group>"; };
@@ -73,7 +70,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD28D0EE15728D4A00B45E03 /* Cocoa.framework in Frameworks */,
-				FD28D13B15728F1D00B45E03 /* libboinc_api.a in Frameworks */,
 				FD28D13D15728F1D00B45E03 /* libboinc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,7 +80,6 @@
 			files = (
 				FD28D10C15728D4A00B45E03 /* SenTestingKit.framework in Frameworks */,
 				FD28D10D15728D4A00B45E03 /* Cocoa.framework in Frameworks */,
-				FD28D13C15728F1D00B45E03 /* libboinc_api.a in Frameworks */,
 				FD28D13E15728F1D00B45E03 /* libboinc.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				FD28D13615728F1D00B45E03 /* boinc */,
-				FD28D13715728F1D00B45E03 /* libboinc_api.a */,
 				FD28D13815728F1D00B45E03 /* libboinc.a */,
 				FD28D12115728D5E00B45E03 /* gitignore.gitignore */,
 				FD28D0F315728D4A00B45E03 /* GGC */,
